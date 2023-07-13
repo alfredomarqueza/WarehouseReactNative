@@ -13,7 +13,7 @@ let seed = 1;
 app.post('/insert', (req, res) => {
   console.log(JSON.stringify(req.body));
 
-  collection[seed.toString()] = req.body
+  collection[seed.toString()] = { ...req.body, _id: seed }
   seed++;
   res.send('inserted')
 })

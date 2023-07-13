@@ -8,8 +8,19 @@ https://user-images.githubusercontent.com/51949347/198842037-2bd63157-8b9f-4295-
 
 
 
-# Instalación
+# Install
 npm install
 
-# Comando para correr en Android
-npx react-native run-android
+# Android
+
+## Run debug
+npm run android
+
+## Clean Cache
+    cd android
+    gradlew clean
+    OR
+    Android Studio -> File>invalidate Caches/Restart
+
+# Clean Cache React Native
+npx react-native start --reset-cache
