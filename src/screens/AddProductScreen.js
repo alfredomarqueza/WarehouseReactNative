@@ -120,6 +120,7 @@ export const AddProductScreen = ({ navigation }) => {
                         onChangeText={(value) => { onChange(value.replace(/[^0-9\\.]+/g, '')) }}
                         error={errors.price}
                         value={value}
+                        keyboardType='numeric'
                     />
                 )}
                 name="price"

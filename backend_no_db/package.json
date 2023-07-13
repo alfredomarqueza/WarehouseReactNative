@@ -1,5 +1,5 @@
 {
-  "name": "almacenbackend",
+  "name": "almacenbackend_nodb",
   "version": "1.0.0",
   "description": "Backend para el almacen de productos",
   "main": "index.js",

@@ -8,7 +8,7 @@ export const ConnectScreen = ({ navigation }) => {
 
     const [conneting, setConnecting] = useState(false);
     const [error, setError] = useState(false);
-    const [url, setUrl] = useState('');
+    const [url, setUrl] = useState('http://127.0.0.1:3000');
 
     const handleConnect = () => {
         setConnecting(true);
@@ -37,7 +37,7 @@ export const ConnectScreen = ({ navigation }) => {
                     value={url}
                     style={{ margin: 20 }}
                     label={'API URL'}
-                    placeholder={'http://127.0.0.1:3000/'}
+                    placeholder={'http://127.0.0.1:3000'}
                     autoFocus={true}
                     onChangeText={(value) => setUrl(value)}
                 />
