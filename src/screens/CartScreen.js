@@ -5,7 +5,7 @@ import { formatCurrency } from "react-native-format-currency";
 import { Modal, Portal, Text, Button, IconButton, PaperProvider, Divider } from 'react-native-paper';
 import LottieView from 'lottie-react-native';
 import { useTranslation } from 'react-i18next';
-import moment from 'moment';
+import dayjs from 'dayjs';
 
 export const CartScreen = ({ navigation }) => {
 
@@ -69,7 +69,7 @@ export const CartScreen = ({ navigation }) => {
                 <Button style={{ marginTop: 50 }} icon="check" mode="contained" onPress={handlePurchase}>{t('purchase')}</Button>
                 <Portal>
                     <Modal visible={visible} onDismiss={hideModal} contentContainerStyle={{ backgroundColor: 'white', padding: 20, margin: 20, alignItems: 'center' }}>
-                        <Text style={{ margin: 20, fontSize: 20, color: 'black' }}>{t('thanksForBuying')} {moment(new Date()).format('dddd DD MMMM YYYY')}</Text>
+                        <Text style={{ margin: 20, fontSize: 20, color: 'black' }}>{t('thanksForBuying')} {dayjs(new Date()).format('dddd DD MMMM YYYY')}</Text>
                         <LottieView style={{ height: 150, width: 150 }} source={require('../assets/animations/shipping-truck.json')} autoPlay />
                         <View style={{ flexDirection: 'row', justifyContent: 'space-around', alignSelf: 'stretch' }}>
                             <Button icon="check" mode="contained" onPress={() => { hideModal(); emptyCart(); }} >OK</Button>

@@ -15,7 +15,7 @@ import common_es from './translations/es/common.json';
 import i18next from 'i18next';
 import { initReactI18next  } from 'react-i18next';
 import 'intl-pluralrules';
-import 'moment/locale/es';
+import 'dayjs/locale/es';
 
 const App = () => {
 

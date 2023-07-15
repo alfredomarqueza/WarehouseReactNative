@@ -4,7 +4,7 @@ import { Text, TextInput, Button } from 'react-native-paper';
 import { ProductTypeEnum } from '../enums/ProductTypeEnum';
 import { getMarkup } from '../utils/ProductMarkups';
 import { TvTypeEnum } from '../enums/TvTypeEnum';
-import moment from 'moment';
+import dayjs from 'dayjs';
 import { formatCurrency } from "react-native-format-currency";
 import { CartContext } from '../context/CartContext';
 import { useTranslation } from "react-i18next";
@@ -32,7 +32,7 @@ export const ProductScreen = ({ navigation, route }) => {
         <View style={styles.container}>
             <View style={styles.productTile}>
                 <Text style={{ fontWeight: 'bold', textAlign: 'center', marginBottom: 10 }}> {name}</Text>
-                <Text>{t('availableSince')}: {moment(creationDate).format("DD/MMMM/YYYY")}</Text>
+                <Text>{t('availableSince')}: {dayjs(creationDate).format("DD/MMMM/YYYY")}</Text>
                 <Text>{t('productType')}: {productType}</Text>
                 <Text>SKU: {SKU}</Text>
                 <Text>{t('brand')}: {brand}</Text>

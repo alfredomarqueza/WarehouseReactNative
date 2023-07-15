@@ -1,7 +1,7 @@
 import React from 'react';
 import { Picker } from '@react-native-picker/picker';
 import { StyleSheet, Dimensions, View } from 'react-native';
-import moment from 'moment';
+import dayjs from 'dayjs';
 import { useTranslation } from "react-i18next";
 
 export const LanguagePicker = () => {
@@ -13,7 +13,7 @@ export const LanguagePicker = () => {
             <Picker
                 selectedValue={i18n.language}
                 onValueChange={(value, index) => {
-                    moment.locale(value);
+                    dayjs.locale(value);
                     i18n.changeLanguage(value);
                 }}>
                 <Picker.Item label="English" value="en" />
