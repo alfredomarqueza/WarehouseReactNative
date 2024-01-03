@@ -66,7 +66,7 @@ export const CartScreen = ({ navigation }) => {
                     <Text style={{ fontWeight: 'bold' }}>{formatCurrency({ amount: total, code: 'MXN' })[0]}</Text>
                 </Text>
                 <Divider></Divider>
-                <Button style={{ marginTop: 50 }} icon="check" mode="contained" onPress={handlePurchase}>{t('purchase')}</Button>
+                <Button style={{ marginTop: 50, marginBottom: 50 }} icon="check" mode="contained" onPress={handlePurchase}>{t('purchase')}</Button>
                 <Portal>
                     <Modal visible={visible} onDismiss={hideModal} contentContainerStyle={{ backgroundColor: 'white', padding: 20, margin: 20, alignItems: 'center' }}>
                         <Text style={{ margin: 20, fontSize: 20, color: 'black' }}>{t('thanksForBuying')} {dayjs(new Date()).format('dddd DD MMMM YYYY')}</Text>

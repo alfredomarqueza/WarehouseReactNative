@@ -186,6 +186,7 @@ export const AddProductScreen = ({ navigation }) => {
                             onChangeText={onChange}
                             error={errors.meta2}
                             value={value}
+                            keyboardType='numeric'
                         />
                     )}
                     name="meta2"
@@ -227,6 +228,7 @@ export const AddProductScreen = ({ navigation }) => {
                             onChangeText={onChange}
                             error={errors.meta2}
                             value={value}
+                            keyboardType='numeric'
                         />
                     )}
                     name="meta2"
